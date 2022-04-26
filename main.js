@@ -92,6 +92,11 @@ window.onload = _ => {
                 const width = scale(pred.bottomRight[0] - pred.topLeft[0], origWidth, canvasWidth);
                 const height = scale(pred.bottomRight[1] - pred.topLeft[1], origHeight, canvasHeight)
                 ctx.fillRect(canvasWidth - left - width, top, width, height);
+                ctx.font = "42px sans-serif";
+                ctx.textBaseline = "middle";
+                ctx.textAlign = "center";
+                ctx.fillStyle = "#000000";
+                ctx.fillText(Math.round(pred.probability[0] * 100) + "%", canvasWidth - left - width / 2, top + height / 2);
             }
         }
     };
