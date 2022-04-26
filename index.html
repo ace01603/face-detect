@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Face Detection Demo</title>
+    </head>
+    <body>
+        <div id="container">
+            <div id="controls">
+                <div class="control-container">
+                    <p>Webcam status: 
+                        <label id="toggle">
+                            <input id="webcam-toggle" type="checkbox">
+                            <span id="toggle-switch"></span>
+                        </label>
+                    </p>
+                </div>
+                <div class="control-container">
+                    <p>
+                        <label for="probability">Probability:</label>
+                        <input type="range" min="0" max="100" value="80" id="probability" />
+                        <span id="prob-val"></span>
+                    </p>
+                </div>
+            </div>
+            <div id="video-container">
+                <video id="webcam" class="hide" autoplay="true"></video>
+                <canvas id="canvas"></canvas>
+            </div>
+            <p id="message" class="show"></p>
+        </div>
+
+        <!-- tfjs scripts for face detection -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+        <!-- custom js -->
+        <script src="./main.js"></script>
+    </body>
+</html>
