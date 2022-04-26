@@ -8,7 +8,7 @@ window.onload = _ => {
     const message = document.querySelector("#message");
     const probDisplay = document.querySelector("#prob-val");
     const webcamError = "This page requires access to your webcam, assuming you have one. Try refreshing the page and, when prompted for access to the webcam, choose 'Allow'.";
-    const instructions = "Use the toggle switch to turn on your webcam and start detecting faces.";
+    const instructions = "Use the <strong>webcam status</strong> toggle switch to turn on your webcam and start detecting faces.<br/><br/>Use the <strong>probability</strong> slider to set the threshold for face detection. For example, if the probability is 80%, highlighted regions of the webcam image have at least an 80% chance of containing a face.";
     let model, timer;
     let prob = 80;
 
